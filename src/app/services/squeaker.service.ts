@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from "rxjs";
 import {Squeaker} from "../models/squeaker";
+import {SqueakerDTO} from "../models/squeakerDTO";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,11 @@ export class SqueakerService {
     this.headers = new HttpHeaders({'Content-Type' : 'application/json'});
   }
 
-    public findAll(): Observable<Squeaker[]> {
+  public findAll(): Observable<Squeaker[]> {
     return this.http.get<Squeaker[]>(this.squeakerUrl + `/all`);
+  }
+
+  public save(squeakerDTO: SqueakerDTO): Observable<Squeaker> {
+    return this.http.post<Squeaker>(this.squeakerUrl, squeakerDTO);
   }
 }

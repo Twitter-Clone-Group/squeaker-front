@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Squeaker} from "../models/squeaker";
 import {SqueakerService} from "../services/squeaker.service";
+import {NgForm} from "@angular/forms";
+import {SqueakerDTO} from "../models/squeakerDTO";
 
 
 @Component({
@@ -12,6 +14,12 @@ export class SqueakerComponent implements OnInit {
   squeakers: Squeaker[] = [];
 
   constructor(private squeakerService: SqueakerService) {
+  }
+
+  ngOnInit(): void {
+  }
+
+  findAllSqueakers(): void {
     this.squeakerService.findAll().subscribe(
       (data: Squeaker[]) => {
         this.squeakers = data;
@@ -19,7 +27,10 @@ export class SqueakerComponent implements OnInit {
     )
   }
 
-  ngOnInit(): void {
+  saveSqueaker(sendForm: NgForm): void {
+    const squeakerDTO = new SqueakerDTO(sendForm.value.username, sendForm.value.password)
+    this.squeakerService.save(squeakerDTO).subscribe();
+    sendForm.control.reset()
   }
 
 }

@@ -1,6 +1,19 @@
 <p>squeaker works!</p>
+<div class="chat-box bg-white">
+  <form (ngSubmit)="saveSqueaker(sendForm)" #sendForm="ngForm">
+    <div class="input-group">
+      <input class="form-control border no-shadow no-rounded" type="text" name="username" placeholder="username" ngModel>
+      <input class="form-control border no-shadow no-rounded" type="text" name="password" placeholder="password" ngModel>
+      <span class="input-group-btn">
+                    <button class="btn btn-success no-rounded" type="submit">Send</button>
+                  </span>
+    </div><!-- /input-group -->
+  </form>
+</div>
 <div>
-  <button>Click here!</button>
+  <button class="btn btn-success no-rounded" type="submit" (click)="findAllSqueakers()">Get All Squeakers</button>
+</div>
+<div>
   <ol>
     <li *ngFor="let squeaker of this.squeakers">
       <p>
