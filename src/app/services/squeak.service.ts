@@ -8,7 +8,7 @@ import {SqueakDTO} from "../models/squeakDTO";
 @Injectable({
   providedIn: 'root'
 })
-export class SqueakerService {
+export class SqueakService {
   private squeakUrl: string;
   private headers: HttpHeaders;
 
