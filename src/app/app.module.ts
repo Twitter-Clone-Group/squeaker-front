@@ -7,11 +7,13 @@ import { SqueakerComponent } from './squeaker/squeaker.component';
 import {SqueakerService} from "./services/squeaker.service";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {SqueakComponent} from "./squeaker/squeak.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SqueakerComponent
+    SqueakerComponent,
+    SqueakComponent
   ],
     imports: [
         BrowserModule,
