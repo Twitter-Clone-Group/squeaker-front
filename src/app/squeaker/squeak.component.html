@@ -1,0 +1,24 @@
+<p>Type Your Squeaks!!!</p>
+<div class="chat-box bg-white">
+  <form (ngSubmit)="saveSqueak(sendForm)" #sendForm="ngForm">
+    <div class="input-group">
+      <input class="form-control border no-shadow no-rounded" type="text" name="content" placeholder="content" ngModel>
+      <span class="input-group-btn">
+                    <button class="btn btn-success no-rounded" type="submit">Send</button>
+                  </span>
+    </div><!-- /input-group -->
+  </form>
+</div>
+<div>
+  <button class="btn btn-success no-rounded" type="submit" (click)="findAllSqueaks()">Get All Squeaks</button>
+</div>
+<div>
+  <ol>
+    <li *ngFor="let squeak of this.squeaks">
+      <p>
+        id = {{squeak.id}}
+        username = {{squeak.content}}
+      </p>
+    </li>
+  </ol>
+</div>
