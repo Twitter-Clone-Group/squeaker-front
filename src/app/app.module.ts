@@ -7,13 +7,16 @@ import { SqueakerComponent } from './squeaker/squeaker.component';
 import {SqueakerService} from "./services/squeaker.service";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-import {SqueakComponent} from "./squeaker/squeak.component";
+import {SqueakComponent} from "./squeak/squeak.component";
+import {SqueakService} from "./services/squeak.service";
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SqueakerComponent,
-    SqueakComponent
+    SqueakComponent,
+    CommentComponent
   ],
     imports: [
         BrowserModule,
@@ -21,7 +24,7 @@ import {SqueakComponent} from "./squeaker/squeak.component";
         HttpClientModule,
         FormsModule
     ],
-  providers: [SqueakerService],
+  providers: [SqueakerService, SqueakService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
