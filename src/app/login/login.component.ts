@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   //Need to be able to log in a user and keep track of them
-  //Logged in user should be tied to any tweets created and the profile displayed when that button is clicked
+  //Logged-in user should be tied to any tweets created and the profile displayed when that button is clicked
 
   login() {
     this.squeakerService.findSqueakerByUserName(this.username, this.password)
