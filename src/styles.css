@@ -147,6 +147,20 @@ body {
   margin-left: auto;
 }
 
+.sidebarButton {
+  cursor: pointer;
+  background-color: var(--squeaker-color);
+  border: none;
+  color: white;
+  font-weight: 900;
+
+  border-radius: 30px;
+  width: 80px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
 /* post */
 .post__avatar img {
   border-radius: 50%;

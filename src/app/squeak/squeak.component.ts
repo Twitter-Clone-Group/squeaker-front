@@ -31,6 +31,8 @@ export class SqueakComponent implements OnInit {
           }
         )
     )
+
+    this.findAllSqueaks();
   }
 
   findAllSqueaks(): void {
