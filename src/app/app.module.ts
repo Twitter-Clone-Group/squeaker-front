@@ -12,6 +12,7 @@ import {SqueakService} from "./services/squeak.service";
 import { CommentComponent } from './comment/comment.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
     SqueakComponent,
     CommentComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    HomeComponent
   ],
     imports: [
         BrowserModule,
