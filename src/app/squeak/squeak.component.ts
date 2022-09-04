@@ -24,13 +24,12 @@ export class SqueakComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.currentSqueakerId.subscribe(
-      id => this.id = id
-    )
-
-    this.squeakerService.findSqueakerById(this.id).subscribe(
-      (data: Squeaker) => {
-        this.currentSqueaker = data
-      }
+      id => this.squeakerService.findSqueakerById(id)
+        .subscribe(
+          (data: Squeaker) => {
+            this.currentSqueaker = data;
+          }
+        )
     )
   }
 

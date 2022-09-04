@@ -16,10 +16,6 @@ export class SqueakerService {
     this.headers = new HttpHeaders({'Content-Type' : 'application/json'});
   }
 
-  public guestSqueaker(): Observable<Squeaker> {
-    return this.http.get<Squeaker>(this.squeakerUrl + '1');
-  }
-
   public findSqueakerById(id: number): Observable<Squeaker> {
     return this.http.get<Squeaker>(this.squeakerUrl + "/" + id);
   }

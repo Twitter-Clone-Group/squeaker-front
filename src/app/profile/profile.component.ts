@@ -16,21 +16,18 @@ export class ProfileComponent implements OnInit {
   // @ts-ignore
   currentSqueaker: Squeaker;
   squeaks: Squeak[] = [];
-  id = 0;
-
 
   constructor(private squeakService: SqueakService, private dataService: DataService, private squeakerService: SqueakerService) {
   }
 
   ngOnInit(): void {
     this.dataService.currentSqueakerId.subscribe(
-      id => this.id = id
-    )
-
-    this.squeakerService.findSqueakerById(this.id).subscribe(
-      (data: Squeaker) => {
-        this.currentSqueaker = data
-      }
+      id => this.squeakerService.findSqueakerById(id)
+        .subscribe(
+          (data: Squeaker) => {
+            this.currentSqueaker = data;
+          }
+        )
     )
   }
 

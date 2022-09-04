@@ -11,20 +11,18 @@ import {DataService} from "../services/data.service";
 export class HomeComponent implements OnInit {
   // @ts-ignore
   currentSqueaker: Squeaker;
-  id = 0;
 
   constructor(private squeakerService: SqueakerService, private dataService: DataService) {
   }
 
   ngOnInit(): void {
     this.dataService.currentSqueakerId.subscribe(
-      id => this.id = id
-    )
-
-    this.squeakerService.findSqueakerById(this.id).subscribe(
-      (data: Squeaker) => {
-        this.currentSqueaker = data
-      }
+      id => this.squeakerService.findSqueakerById(id)
+        .subscribe(
+          (data: Squeaker) => {
+            this.currentSqueaker = data;
+          }
+        )
     )
   }
 

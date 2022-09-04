@@ -13,15 +13,11 @@ import {DataService} from "../services/data.service";
 export class LoginComponent implements OnInit {
   username = '';
   password = '';
-  id = 0;
 
   constructor(private squeakerService: SqueakerService, private dataService: DataService) {
   }
 
   ngOnInit(): void {
-    this.dataService.currentSqueakerId.subscribe(
-      id => this.id = id
-    )
   }
 
   saveSqueaker(sendForm: NgForm): void {
