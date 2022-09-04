@@ -18,12 +18,12 @@
 <!-- partial:index.partial.html -->
 <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-<!--      <input type="text" placeholder="email address"/>-->
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    <form #gfg = "ngForm">
+      <br>
+      <br>
+      Username: <input type="text" name = 'username' ngModel>
+      Password: <input type="password" name = 'password' ngModel>
+      <button class="btn btn-success no-rounded" type="submit" (click)="saveSqueaker(gfg)">Register</button>
     </form>
     <form class="login-form">
       <input type="text" placeholder="username"/>
