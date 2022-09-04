@@ -20,17 +20,17 @@
   <i class="fab fa-twitter"></i>
   <div class="sidebarOption active">
     <span class="material-icons"> home </span>
-    <h2>Home</h2>
+    <button routerLink="/home">Home</button>
   </div>
 
   <div class="sidebarOption">
     <span class="material-icons"> search </span>
-    <h2>Login</h2>
+    <button routerLink="/login">Login</button>
   </div>
 
   <div class="sidebarOption">
     <span class="material-icons"> perm_identity </span>
-    <h2>Profile</h2>
+    <button routerLink="/profile">Profile</button>
   </div>
 </div>
 <!-- sidebar ends -->
@@ -51,14 +51,14 @@
         />
         <input type="text" placeholder="What's happening?" />
       </div>
-      <button class="squeakBox__squeakButton">Squeak</button>
+<!--      <button class="squeakBox__squeakButton" (click)="">Squeak</button>-->
     </form>
   </div>
   <!-- squeakBox ends -->
 
   <!-- post starts -->
   <div>
-    <app-squeaker></app-squeaker>
+    <app-squeak></app-squeak>
   </div>
   <!-- post ends -->
 </div>
