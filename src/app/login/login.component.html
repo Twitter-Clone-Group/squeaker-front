@@ -15,6 +15,26 @@
   />
 </head>
 <body>
+<!-- sidebar starts -->
+<div class="sidebar">
+  <!--  <i class="fab fa-twitter"></i>-->
+  <img src="https://i.ibb.co/7vFVtv8/rat.png" width = "30" height = "30"/>
+  <div class="sidebarOption active">
+    <span class="material-icons"> home </span>
+    <button routerLink="/home">Home</button>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> search </span>
+    <button routerLink="/login">Login</button>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> perm_identity </span>
+    <button routerLink="/profile">Profile</button>
+  </div>
+</div>
+<!-- sidebar ends -->
 <!-- partial:index.partial.html -->
 <div class="login-page">
   <div class="form">
@@ -25,12 +45,12 @@
       Password: <input type="password" name = 'password' ngModel>
       <button class="btn btn-success no-rounded" type="submit" (click)="saveSqueaker(gfg)">Register</button>
     </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
+    <div>
+      <input type="text" placeholder="username" name="username" [(ngModel)]="username"/>
+      <input type="password" placeholder="password" [(ngModel)]="password"/>
+      <button routerLink="/home" type="submit" (click)="login()">login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
-    </form>
+    </div>
   </div>
 </div>
 <!-- partial -->

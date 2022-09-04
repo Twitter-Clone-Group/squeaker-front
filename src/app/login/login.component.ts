@@ -3,6 +3,7 @@ import {Squeaker} from "../models/squeaker";
 import {SqueakerService} from "../services/squeaker.service";
 import {NgForm} from "@angular/forms";
 import {SqueakerDTO} from "../models/squeakerDTO";
+import {DataService} from "../services/data.service";
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,10 @@ import {SqueakerDTO} from "../models/squeakerDTO";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  username = '';
+  password = '';
 
-  constructor(private squeakerService: SqueakerService) {
+  constructor(private squeakerService: SqueakerService, private dataService: DataService) {
   }
 
   ngOnInit(): void {
@@ -27,7 +30,12 @@ export class LoginComponent implements OnInit {
   //Logged in user should be tied to any tweets created and the profile displayed when that button is clicked
 
   login() {
-    return true;
+    this.squeakerService.findSqueakerByUserName(this.username, this.password)
+    .subscribe(
+      (data: Squeaker) => {
+        this.dataService.changeCurrentSqueakerId(data.id)
+      }
+    );
   }
 
 }

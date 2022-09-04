@@ -3,6 +3,7 @@ import {Squeaker} from "../models/squeaker";
 import {SqueakerService} from "../services/squeaker.service";
 import {NgForm} from "@angular/forms";
 import {SqueakerDTO} from "../models/squeakerDTO";
+import {DataService} from "../services/data.service";
 
 
 @Component({
@@ -12,11 +13,21 @@ import {SqueakerDTO} from "../models/squeakerDTO";
 })
 export class SqueakerComponent implements OnInit {
   squeakers: Squeaker[] = [];
+  // @ts-ignore
+  currentSqueaker: Squeaker;
 
-  constructor(private squeakerService: SqueakerService) {
+  constructor(private squeakerService: SqueakerService, private dataService: DataService) {
   }
 
   ngOnInit(): void {
+    this.dataService.currentSqueakerId.subscribe(
+      id => this.squeakerService.findSqueakerById(id)
+        .subscribe(
+          (data: Squeaker) => {
+            this.currentSqueaker = data;
+          }
+        )
+    )
   }
 
   findAllSqueakers(): void {
