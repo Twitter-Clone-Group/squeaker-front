@@ -10,13 +10,15 @@ import {FormsModule} from "@angular/forms";
 import {SqueakComponent} from "./squeak/squeak.component";
 import {SqueakService} from "./services/squeak.service";
 import { CommentComponent } from './comment/comment.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SqueakerComponent,
     SqueakComponent,
-    CommentComponent
+    CommentComponent,
+    LoginComponent
   ],
     imports: [
         BrowserModule,
