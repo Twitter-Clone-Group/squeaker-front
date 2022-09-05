@@ -46,8 +46,9 @@ export class SqueakComponent implements OnInit {
   saveSqueak(sendForm: NgForm): void {
     const squeakDTO = new SqueakDTO(sendForm.value.content, this.currentSqueaker)
     this.squeakService.save(squeakDTO).subscribe();
-    sendForm.control.reset();
     this.findAllSqueaks();
+    this.findAllSqueaks();
+    sendForm.control.reset();
   }
 
 }
