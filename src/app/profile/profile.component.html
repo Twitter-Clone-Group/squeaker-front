@@ -17,7 +17,7 @@
 <body>
 <!-- sidebar starts -->
 <div class="sidebar">
-<!--  <i class="fab fa-twitter"></i>-->
+  <!--  <i class="fab fa-twitter"></i>-->
   <img src="https://i.ibb.co/7vFVtv8/rat.png" width = "30" height = "30"/>
   <div class="sidebarOption active">
     <span class="material-icons"> home </span>
@@ -36,7 +36,7 @@
 </div>
 <!-- sidebar ends -->
 
-<!--<app-profile-editor-modal></app-profile-editor-modal>-->
+<!-- profile starts-->
 <div class="header-photo">
   <Style>h1 {text-align: center;}
   </Style>
@@ -51,9 +51,6 @@
   </div>
 
   <!-- post starts -->
-<!--  <div>-->
-<!--    <button class="btn btn-success no-rounded" type="submit" (click)="findUsernameSqueaks()">Get {{ this.currentSqueaker.username}}'s Squeaks</button>-->
-<!--  </div>-->
   <div>
     <ol>
       <li *ngFor="let squeak of this.squeaksUser">
@@ -94,12 +91,22 @@
     </ol>
   </div>
   <!-- post ends -->
+</div>
+<!-- profile ends -->
 
+<!-- widgets starts -->
+<div class="widgets">
+
+  <div class="widgets__input">
+    <span class="material-icons widgets__searchIcon"> search </span>
+    <input type="text" placeholder="Search" />
+  </div>
 
 </div>
+<!-- widgets ends -->
 
-
-
+</body>
+</html>
 
 
 
