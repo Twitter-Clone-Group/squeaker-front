@@ -50,6 +50,10 @@ body {
   margin-top: 20px;
 }
 
+.sidebar__squeak:hover {
+  background-color: #c2a8f7;
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -148,6 +152,10 @@ body {
   margin-left: auto;
 }
 
+.squeakBox__squeakButton:hover {
+  background-color: #c2a8f7;
+}
+
 .sidebarButton {
   cursor: pointer;
   background-color: var(--squeaker-color);
@@ -160,6 +168,10 @@ body {
   height: 40px;
   margin-top: 20px;
   margin-left: 0px;
+}
+
+.sidebarButton:hover{
+  background-color: #c2a8f7;
 }
 
 /* post */
