@@ -13,6 +13,8 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous"
   />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -20,28 +22,33 @@
   <div class="centered">
     <img
       src="https://i.ibb.co/7vFVtv8/rat.png"
-      alt=""
     />
   </div>
 </div>
 
 <div class="split right">
 <div class="centered">
-<div class="login-page">
-  <div class="form">
+<div class="testbox">
+  <h1>Registration</h1>
     <form #gfg = "ngForm">
-      <br>
-      <br>
-      Username: <input type="text" name = 'username' ngModel>
-      First Name: <input type="text" name = 'firstName' ngModel>
-      Last Name: <input type="text" name = 'lastName' ngModel>
-      Email: <input type="text" name = 'email' ngModel>
-      Profile Picture: <input type="text" name = 'profilePic' ngModel>
-      Password: <input type="password" name = 'password' ngModel>
-      <button class="btn btn-success no-rounded" type="submit" (click)="saveSqueaker(gfg)">Register</button>
+
+      <label id="icon" for="name"><i class="icon-envelope"></i></label>
+      <input type="text" name = 'email' ngModel id="name" placeholder="Email" required/>
+
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name = 'username' ngModel placeholder="Username" required/>
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name = 'firstName' ngModel placeholder="First Name">
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name = 'lastName' ngModel placeholder="Last Name">
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name = 'profilePic' ngModel placeholder="Profile Picture">
+      <label id="icon" for="name"><i class="icon-shield"></i></label>
+      <input type="password" name = 'password' ngModel placeholder="Password">
+      <a href="/login" class="button" type="submit" (click)="saveSqueaker(gfg)">Register</a>
+<!--      <button class="btn btn-success no-rounded" type="submit" (click)="saveSqueaker(gfg)">Register</button>-->
     </form>
   </div>
-</div>
 </div>
 </div>
 <!-- partial -->
