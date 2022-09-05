@@ -16,35 +16,51 @@ export class ProfileComponent implements OnInit {
   // @ts-ignore
   currentSqueaker: Squeaker;
   squeaks: Squeak[] = [];
+  squeaksUser: Squeak[] = [];
+
+  id = 0
 
   constructor(private squeakService: SqueakService, private dataService: DataService, private squeakerService: SqueakerService) {
   }
 
+  // ngOnInit(): void {
+  //   this.dataService.currentSqueakerId.subscribe(
+  //     id => this.squeakerService.findSqueakerById(id)
+  //       .subscribe(
+  //         (data: Squeaker) => {
+  //           this.currentSqueaker = data;
+  //         }
+  //       )
+  //   )
+  //   // this.findAllSqueaks();
+  //   this.findUsernameSqueaks();
+  // }
+
   ngOnInit(): void {
-    this.dataService.currentSqueakerId.subscribe(
-      id => this.squeakerService.findSqueakerById(id)
-        .subscribe(
-          (data: Squeaker) => {
-            this.currentSqueaker = data;
-          }
-        )
+      this.dataService.currentSqueakerId.subscribe(id => {
+        this.squeakerService.findSqueakerById(id).subscribe((data: Squeaker)=>{
+        this.currentSqueaker=data;
+        this.findUsernameSqueaks();
+        })
+      })
+  }
+
+  findUsernameSqueaks(): void {
+    this.squeakService.findByUsername(this.currentSqueaker.username).subscribe(
+      (data: Squeak[]) => {
+        this.squeaksUser = data;
+      }
     )
   }
 
 
-  // findUsernameSqueaks(): void {
-  //   this.squeakService.findByUsername().subscribe(
+  // findAllSqueaks(): void {
+  //   this.squeakService.findAll().subscribe(
   //     (data: Squeak[]) => {
   //       this.squeaks = data;
   //     }
   //   )
   // }
-
-  saveSqueak(sendForm: NgForm): void {
-    const squeakDTO = new SqueakDTO(sendForm.value.content, this.currentSqueaker)
-    this.squeakService.save(squeakDTO).subscribe();
-    sendForm.control.reset()
-  }
 
 
 
