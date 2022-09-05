@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from "rxjs";
 import {Squeak} from "../models/squeak";
 import {SqueakDTO} from "../models/squeakDTO";
+import {Squeaker} from "../models/squeaker";
 
 
 @Injectable({
@@ -24,4 +25,10 @@ export class SqueakService {
   public save(squeakDTO: SqueakDTO): Observable<Squeak> {
     return this.http.post<Squeak>(this.squeakUrl, squeakDTO);
   }
+
+  public findByUsername(username : string): Observable<Squeak[]> {
+    return this.http.get<Squeak[]>(this.squeakUrl + `/`+ username);
+  }
+
+
 }
