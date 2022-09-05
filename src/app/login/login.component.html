@@ -13,6 +13,8 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous"
   />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 <!-- sidebar starts -->
@@ -38,10 +40,26 @@
 <!-- partial:index.partial.html -->
 <div class="login-page">
     <div>
-      <input type="text" placeholder="username" name="username" [(ngModel)]="username"/>
-      <input type="password" placeholder="password" [(ngModel)]="password"/>
-      <button routerLink="/home" type="submit" (click)="login()">login</button>
-      <p class="message">Not registered? <a href="/register">Create an account</a></p>
+      <h1>Login</h1>
+      <br>
+      <br>
+      <ul style="list-style: none;">
+        <li>
+          <input type="text" placeholder="username" name="username" [(ngModel)]="username"/>
+        </li>
+        <br>
+        <li>
+          <input type="password" placeholder="password" [(ngModel)]="password"/>
+        </li>
+        <br>
+        <li>
+          <button routerLink="/home" type="submit" (click)="login()">login</button>
+        </li>
+        <br>
+        <li>
+          <p class="message">Not registered? <a href="/register">Create an account</a></p>
+        </li>
+      </ul>
     </div>
 </div>
 <!-- partial -->
