@@ -1,30 +1,18 @@
 <!-- squeakBox starts -->
-<!--<p>Type Your Squeaks!!!</p>-->
 <div class="squeakBox">
-  <form>
+  <form (ngSubmit)="saveSqueak(sendForm)" #sendForm="ngForm">
     <div class="squeakBox__input">
       <img
         src="{{this.currentSqueaker.profilePic}}"
         alt=""
       />
-      <input type="text" placeholder="What's happening?" />
+      <input type="text" placeholder="Post squeak here" name="content" ngModel/>
+      <button class="squeakBox__squeakButton" >Squeak</button>
     </div>
-    <button class="squeakBox__squeakButton" >Squeak</button>
   </form>
 </div>
 <!-- squeakBox ends -->
 
-
-<div class="chat-box bg-white">
-  <form (ngSubmit)="saveSqueak(sendForm)" #sendForm="ngForm">
-    <div class="input-group">
-      <input class="form-control border no-shadow no-rounded" type="text" name="content" placeholder="content" ngModel >
-      <span class="input-group-btn">
-                    <button class="btn btn-success no-rounded" type="submit">Send</button>
-      </span>
-    </div><!-- /input-group -->
-  </form>
-</div>
 <div>
   <button class="btn btn-success no-rounded" type="submit" (click)="findAllSqueaks()">Get All Squeaks</button>
 </div>
