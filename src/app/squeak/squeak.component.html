@@ -14,9 +14,6 @@
 <!-- squeakBox ends -->
 
 <div>
-  <button class="btn btn-success no-rounded" type="submit" (click)="findAllSqueaks()">Get All Squeaks</button>
-</div>
-<div>
   <div>
     <ol>
       <li *ngFor="let squeak of this.squeaks">
@@ -32,7 +29,7 @@
             <div class="post__header">
               <div class="post__headerText">
                 <h3>
-                  {{ squeak.squeaker.username }}
+                  {{ squeak.squeaker.firstName }} {{ squeak.squeaker.lastName}}
                   <span class="post__headerSpecial"
                   ><span class="material-icons post__badge"> verified </span>@{{ squeak.squeaker.username }}</span
                   >
