@@ -1,11 +1,27 @@
-<p>Type Your Squeaks!!!</p>
+<!-- squeakBox starts -->
+<!--<p>Type Your Squeaks!!!</p>-->
+<div class="squeakBox">
+  <form>
+    <div class="squeakBox__input">
+      <img
+        src="{{this.currentSqueaker.profilePic}}"
+        alt=""
+      />
+      <input type="text" placeholder="What's happening?" />
+    </div>
+    <button class="squeakBox__squeakButton" >Squeak</button>
+  </form>
+</div>
+<!-- squeakBox ends -->
+
+
 <div class="chat-box bg-white">
   <form (ngSubmit)="saveSqueak(sendForm)" #sendForm="ngForm">
     <div class="input-group">
-      <input class="form-control border no-shadow no-rounded" type="text" name="content" placeholder="content" ngModel>
+      <input class="form-control border no-shadow no-rounded" type="text" name="content" placeholder="content" ngModel >
       <span class="input-group-btn">
                     <button class="btn btn-success no-rounded" type="submit">Send</button>
-                  </span>
+      </span>
     </div><!-- /input-group -->
   </form>
 </div>
@@ -19,7 +35,7 @@
         <div class="post">
           <div class="post__avatar">
             <img
-              src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+              src="{{squeak.squeaker.profilePic}}"
               alt=""
             />
           </div>
@@ -51,4 +67,5 @@
         </div>
       </li>
     </ol>
+  </div>
 </div>
