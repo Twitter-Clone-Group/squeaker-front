@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 
   saveSqueaker(sendForm: NgForm): void {
-    const squeakerDTO = new SqueakerDTO(sendForm.value.username, sendForm.value.password)
+    const squeakerDTO = new SqueakerDTO(sendForm.value.username, sendForm.value.password, sendForm.value.firstName, sendForm.value.lastName, sendForm.value.email, sendForm.value.profilePic)
     this.squeakerService.save(squeakerDTO).subscribe();
     sendForm.control.reset()
   }
