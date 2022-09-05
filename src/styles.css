@@ -6,8 +6,8 @@
 }
 
 body {
-  --squeaker-color: #fd0000;
-  --squeaker-background: #e6ecf0;
+  --squeaker-color: rgb(219, 203, 253);
+  --squeaker-background: #fafafa;
 }
 
 .sidebarOption {
@@ -16,8 +16,9 @@ body {
   cursor: pointer;
 }
 
-.sidebarOption .material-icons,
-.fa-twitter {
+.sidebarOption .material-icons
+/*.fa-twitter */
+{
   padding: 20px;
 }
 
@@ -34,9 +35,9 @@ body {
   transition: color 100ms ease-out;
 }
 
-.sidebarOption.active {
-  color: var(--squeaker-color);
-}
+/*.sidebarOption.active {*/
+/*  color: var(--squeaker-color);*/
+/*}*/
 
 .sidebar__squeak {
   width: 100%;
@@ -68,10 +69,10 @@ body {
   padding-right: 20px;
 }
 
-.fa-twitter {
-  color: var(--squeaker-color);
-  font-size: 30px;
-}
+/*.fa-twitter {*/
+/*  color: var(--squeaker-color);*/
+/*  font-size: 30px;*/
+/*}*/
 
 /* feed */
 .feed {
