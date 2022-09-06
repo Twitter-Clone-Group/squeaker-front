@@ -33,6 +33,12 @@
     <span class="material-icons"> perm_identity </span>
     <button class="sidebarButton" routerLink="/profile">Profile</button>
   </div>
+
+  <div class="sidebarOption" *ngIf="currentSqueaker.id!=1">
+    <span class="material-icons"> perm_identity </span>
+    <button class="sidebarButton" routerLink="/login" (click)="logout()">Logout</button>
+  </div>
+
 </div>
 <!-- sidebar ends -->
 
