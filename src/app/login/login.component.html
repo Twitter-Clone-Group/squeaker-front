@@ -28,7 +28,7 @@
 <div class="split right">
   <div class="centered">
     <div class="testbox">
-      <h1>Registration</h1>
+      <h1>Login</h1>
 
       <label id="icon"><i class="icon-user"></i></label>
       <input type="text" name = 'username' [(ngModel)]="username" placeholder="Username" required/>
@@ -37,12 +37,12 @@
 
       <label id="icon"><i class="icon-shield"></i></label>
       <input type="password" placeholder="password" [(ngModel)]="password"/>
-      <a href="/home" class="button" type="submit" (click)="login()">Login</a>
-<!--      <button routerLink="/home" type="submit" (click)="login()">login</button>-->
+<!--      <a href="/home" class="button" type="submit" (click)="login()">Login</a>-->
+      <button routerLink="/home" type="submit" (click)="login()">login</button>
 
       <p class="message">Not registered? <a href="/register">Create an account</a></p>
       <br>
-      <p class="message">or click <a href="/home">here</a> return to feed.</p>
+      <p class="message">or click <a routerLink="/home">here</a> return to feed.</p>
     </div>
   </div>
 </div>
