@@ -10,7 +10,7 @@ describe('ProfileEditComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ProfileEditComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ProfileEditComponent);
     component = fixture.componentInstance;
