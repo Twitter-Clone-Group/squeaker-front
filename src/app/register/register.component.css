@@ -16,12 +16,14 @@
 
 }
 img {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 70%;
-  position: relative;
-  top: 150px;
+  margin: 0;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
 }
 
 /* Control the right side */
@@ -52,7 +54,7 @@ select {
 
 p {
   font-size: 12px;
-  width: 150px;
+  width: 130px;
   display: inline-block;
   margin-left: 18px;
 }
@@ -70,7 +72,13 @@ html{
 }
 
 .testbox {
-  margin: 20px auto;
+  margin: 0;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   width: 343px;
   height: 464px;
   -webkit-border-radius: 8px/7px;
@@ -81,8 +89,6 @@ html{
   -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
   box-shadow: 1px 2px 5px rgba(0,0,0,.31);
   border: solid 1px #cbc9c9;
-  position: relative;
-  top: 150px;
 }
 
 input[type=radio] {
@@ -163,6 +169,7 @@ a.button {
   box-shadow: 0 3px rgb(219, 203, 253);
   transition: all 0.1s linear 0s;
   top: 0px;
+  left: -15px;
   position: relative;
 }
 
