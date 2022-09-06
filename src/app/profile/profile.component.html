@@ -44,9 +44,12 @@
 
 <!-- profile starts-->
 <div class="header-photo">
-  <Style>h1 {text-align: center;}
-  </Style>
-  <h1>Welcome to {{ this.currentSqueaker.username}}'s Profile Page</h1>
+
+  <div class="feed__header">
+    <h2>Profile - HELLO {{ this.currentSqueaker.username.toUpperCase()}}</h2>
+    <br>
+  </div>
+
 
   <img style="width: 100%; height: 50%" src="https://wegotthiscovered.com/wp-content/uploads/2020/04/ezgif.com-webp-to-jpg-27.jpg" alt="background-image">
   <button  class="btn btn-outlined" routerLink="/edit">Edit Profile</button>
@@ -58,7 +61,7 @@
 
     <h2>{{ this.currentSqueaker.firstName}} {{this.currentSqueaker.lastName}} <span class="material-icons post__badge"> verified </span></h2>
 
-    <h2><span class="post__headerSpecial">{{ this.currentSqueaker.username }}</span></h2>
+    <h2><span class="post__headerSpecial"> @{{ this.currentSqueaker.username }}</span></h2>
 
     <h2 class="post__headerSpecial"><i class='fas fa-calendar-alt'></i>Joined {{currentSqueaker.joinDate}}</h2>
 
