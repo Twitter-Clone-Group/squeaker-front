@@ -1,5 +1,5 @@
 <!-- squeakBox starts -->
-<div class="squeakBox">
+<div class="squeakBox" *ngIf="currentSqueaker.id!=1">
   <form (ngSubmit)="saveSqueak(sendForm)" #sendForm="ngForm">
     <div class="squeakBox__input">
       <img
