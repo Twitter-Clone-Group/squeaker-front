@@ -34,7 +34,12 @@
     <button class="sidebarButton" routerLink="/profile">Profile</button>
   </div>
 
-  <button class="sidebar__squeak">Squeak</button>
+  <div class="sidebarOption">
+    <span class="material-icons"> perm_identity </span>
+    <button class="sidebarButton" routerLink="/login">Logout</button>
+  </div>
+
+<!--  <button class="sidebar__squeak">Squeak</button>-->
 
 </div>
 <!-- sidebar ends -->
@@ -42,7 +47,7 @@
 <!-- feed starts -->
 <div class="feed">
   <div class="feed__header">
-    <h2>Home - Hello {{ this.currentSqueaker.username}}</h2>
+    <h2>HOME - Hello {{ this.currentSqueaker.username}}</h2>
   </div>
 
 
