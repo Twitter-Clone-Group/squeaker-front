@@ -6,4 +6,5 @@ export interface Squeaker {
   lastName: string;
   email: string;
   profilePic: string;
+  joinDate: number;
 }
