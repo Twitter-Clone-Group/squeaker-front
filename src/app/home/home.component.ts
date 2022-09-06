@@ -26,4 +26,16 @@ export class HomeComponent implements OnInit {
     )
   }
 
+  logout(): void {
+    this.dataService.changeCurrentSqueakerId(1)
+    this.dataService.currentSqueakerId.subscribe(
+      id => this.squeakerService.findSqueakerById(id)
+        .subscribe(
+          (data: Squeaker) => {
+            this.currentSqueaker = data;
+          }
+        )
+    )
+  }
+
 }

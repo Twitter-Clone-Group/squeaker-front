@@ -25,7 +25,7 @@
   </div>
 
   <div class="sidebarOption">
-    <span class="material-icons"> search </span>
+    <span class="material-icons"> login </span>
     <button class="sidebarButton" routerLink="/login">Login</button>
   </div>
 
@@ -34,9 +34,9 @@
     <button class="sidebarButton" routerLink="/profile">Profile</button>
   </div>
 
-  <div class="sidebarOption">
-    <span class="material-icons"> perm_identity </span>
-    <button class="sidebarButton" routerLink="/login">Logout</button>
+  <div class="sidebarOption" *ngIf="currentSqueaker.id!=1">
+    <span class="material-icons"> logout </span>
+    <button class="sidebarButton" routerLink="/login" (click)="logout()">Logout</button>
   </div>
 
 <!--  <button class="sidebar__squeak">Squeak</button>-->
