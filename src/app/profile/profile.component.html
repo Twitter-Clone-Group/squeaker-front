@@ -50,11 +50,11 @@
 
     <img class="profile-picture" src="{{this.currentSqueaker.profilePic}}" alt="profile-picture">
 
-    <h2>{{ this.currentSqueaker.firstName}} firstname <span class="material-icons post__badge"> verified </span></h2>
+    <h2>{{ this.currentSqueaker.firstName}} {{this.currentSqueaker.lastName}} <span class="material-icons post__badge"> verified </span></h2>
 
     <h2><span class="post__headerSpecial">{{ this.currentSqueaker.username }}</span></h2>
 
-    <h2 class="post__headerSpecial"><i class='fas fa-calendar-alt'></i>Joined September 2022</h2>
+    <h2 class="post__headerSpecial"><i class='fas fa-calendar-alt'></i>Joined {{currentSqueaker.joinDate}}</h2>
 
     <h2 class="post__headerSpecial"> 0 Followers 0 Following </h2>
 
@@ -78,7 +78,7 @@
                 <h3>
                   {{ squeak.squeaker.username }}
                   <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span>@{{ squeak.squeaker.username }}</span
+                  ><span class="material-icons post__badge"> verified </span>@{{ squeak.squeaker.username }} {{squeak.postedAt}}</span
                   >
                 </h3>
               </div>
