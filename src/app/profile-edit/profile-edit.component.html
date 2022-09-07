@@ -32,7 +32,6 @@
 
         <label id="icon" for="name"><i class="icon-envelope"></i></label>
         <input type="text" name = 'email' ngModel id="name" placeholder="Email"/>
-
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input type="text" name = 'username' ngModel placeholder="Username"/>
         <label id="icon" for="name"><i class="icon-user"></i></label>
@@ -42,9 +41,9 @@
         <label id="icon" for="name"><i class="icon-shield"></i></label>
         <input type="password" name = 'password' ngModel placeholder="Password">
         <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input type="password" name = 'profilePic' ngModel placeholder="Profile Picture URL">
-        <p>Click <a href="/profile">here</a> to return back to your profile page.</p>
-        <a href="/profile" class="button" type="submit" (click)="updateSqueaker( gfg)">Submit</a>
+        <input type="text" name = 'profilePic' ngModel placeholder="Profile Picture URL">
+        <p>Click <a routerLink="/profile">here</a> to return back to your profile page.</p>
+        <a routerLink="/edit" class="button" type="submit" (click)="updateSqueaker(gfg)">Submit</a>
       </form>
     </div>
   </div>
