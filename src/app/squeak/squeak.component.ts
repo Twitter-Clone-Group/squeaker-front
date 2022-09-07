@@ -17,7 +17,7 @@ export class SqueakComponent implements OnInit {
   // @ts-ignore
   currentSqueaker: Squeaker;
   squeaks: Squeak[] = [];
-  id = 0
+  image: string = "";
 
   constructor(private squeakService: SqueakService, private dataService: DataService, private squeakerService: SqueakerService) {
   }
@@ -44,7 +44,7 @@ export class SqueakComponent implements OnInit {
   }
 
   saveSqueak(sendForm: NgForm): void {
-    const squeakDTO = new SqueakDTO(sendForm.value.content, this.currentSqueaker)
+    const squeakDTO = new SqueakDTO(sendForm.value.content, this.currentSqueaker, this.image)
     this.squeakService.save(squeakDTO).subscribe();
     this.findAllSqueaks();
     this.findAllSqueaks();

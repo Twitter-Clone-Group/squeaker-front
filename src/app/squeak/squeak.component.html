@@ -7,6 +7,7 @@
         alt=""
       />
       <input type="text" placeholder="Post squeak here" name="content" ngModel/>
+      <input type="text" placeholder="Image url here" name="imageUrl" [(ngModel)]="image">
       <button class="squeakBox__squeakButton" >Squeak</button>
     </div>
   </form>
@@ -39,8 +40,16 @@
                 <p>{{squeak.content}}</p>
               </div>
             </div>
+<!--            <img *ngIf="squeak.id % 2 == 0"-->
+<!--              src="https://cdn.discordapp.com/attachments/1009121959516315688/1016795716905078875/IMG_3518.png"-->
+<!--              alt=""-->
+<!--            />-->
+<!--            <img *ngIf="squeak.id % 2 != 0"-->
+<!--              src="https://cdn.discordapp.com/attachments/1009121959516315688/1016899619453673502/IMG_3526.png"-->
+<!--              alt=""-->
+<!--            />-->
             <img
-              src="https://cdn.discordapp.com/attachments/1009121959516315688/1016795716905078875/IMG_3518.png"
+              src="{{squeak.image}}"
               alt=""
             />
             <div class="post__footer">

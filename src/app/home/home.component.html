@@ -24,12 +24,12 @@
     <button class="sidebarButton" routerLink="/home">Home</button>
   </div>
 
-  <div class="sidebarOption">
+  <div class="sidebarOption" *ngIf="currentSqueaker.id==1">
     <span class="material-icons"> login </span>
     <button class="sidebarButton" routerLink="/login">Login</button>
   </div>
 
-  <div class="sidebarOption">
+  <div class="sidebarOption" *ngIf="currentSqueaker.id!=1">
     <span class="material-icons"> perm_identity </span>
     <button class="sidebarButton" routerLink="/profile">Profile</button>
   </div>
