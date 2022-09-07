@@ -34,4 +34,9 @@ export class SqueakerService {
   public save(squeakerDTO: SqueakerDTO): Observable<Squeaker> {
     return this.http.post<Squeaker>(this.squeakerUrl, squeakerDTO);
   }
+
+  public update(id: number, squeakerDTO: SqueakerDTO): Observable<Squeaker> {
+    console.log(squeakerDTO);
+    return this.http.post<Squeaker>(this.squeakerUrl + "/edit/" +id, squeakerDTO);
+  }
 }
