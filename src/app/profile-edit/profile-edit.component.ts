@@ -31,6 +31,7 @@ export class ProfileEditComponent implements OnInit {
   updateSqueaker(sendForm: NgForm): void {
     const squeakerDTO = new SqueakerDTO(sendForm.value.username, sendForm.value.password, sendForm.value.firstName, sendForm.value.lastName, sendForm.value.email, sendForm.value.profilePic)
     this.squeakerService.update(this.currentSqueaker.id, squeakerDTO).subscribe();
+    console.log(squeakerDTO);
     sendForm.control.reset()
   }
 
