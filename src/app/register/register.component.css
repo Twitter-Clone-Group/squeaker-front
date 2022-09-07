@@ -150,7 +150,7 @@ input[type=password]{
   margin-top: 20px;
 }
 
-a.button {
+button {
   font-size: 14px;
   font-weight: 600;
   color: white;
@@ -163,6 +163,7 @@ a.button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  border: none;
   background-color: rgb(219, 203, 253);
   -webkit-box-shadow: 0 3px rgb(219, 203, 253);
   -moz-box-shadow: 0 3px rgb(219, 203, 253);
