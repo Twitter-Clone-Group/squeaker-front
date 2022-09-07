@@ -5,5 +5,6 @@ export interface Squeak {
   content: string;
   squeaker: Squeaker
   postedAt: number;
+  image: string
 
 }
