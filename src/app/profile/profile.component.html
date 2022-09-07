@@ -24,12 +24,12 @@
     <button class="sidebarButton" routerLink="/home">Home</button>
   </div>
 
-  <div class="sidebarOption">
+  <div class="sidebarOption" *ngIf="currentSqueaker.id == 1">
     <span class="material-icons"> login </span>
     <button class="sidebarButton" routerLink="/login">Login</button>
   </div>
 
-  <div class="sidebarOption">
+  <div class="sidebarOption" *ngIf="currentSqueaker.id!=1">
     <span class="material-icons"> perm_identity </span>
     <button class="sidebarButton" routerLink="/profile">Profile</button>
   </div>
@@ -44,25 +44,28 @@
 
 <!-- profile starts-->
 <div class="header-photo">
-  <Style>h1 {text-align: center;}
-  </Style>
-  <h1>Welcome to {{ this.currentSqueaker.username}}'s Profile Page</h1>
+
+  <div class="feed__header">
+    <h2>Profile - HELLO {{ this.currentSqueaker.username.toUpperCase()}}</h2>
+    <br>
+  </div>
+
 
   <img style="width: 100%; height: 50%" src="https://wegotthiscovered.com/wp-content/uploads/2020/04/ezgif.com-webp-to-jpg-27.jpg" alt="background-image">
-  <button  class="btn btn-outlined">Edit Profile</button>
+  <button  class="btn btn-outlined" routerLink="/edit">Edit Profile</button>
 <!--  <button  class="btn btn-filled">Unfollow</button>-->
 <!--  <button class="btn btn-filled">Follow</button>-->
   <div class="profile-picture-container">
 
     <img class="profile-picture" src="{{this.currentSqueaker.profilePic}}" alt="profile-picture">
 
-    <h2>{{ this.currentSqueaker.firstName}} <span class="material-icons post__badge"> verified </span></h2>
+    <h2>{{ this.currentSqueaker.firstName}} {{this.currentSqueaker.lastName}} <span class="material-icons post__badge"> verified </span></h2>
 
-    <h2><span class="post__headerSpecial">{{ this.currentSqueaker.username }}</span></h2>
+    <h2><span class="post__headerSpecial"> @{{ this.currentSqueaker.username }}</span></h2>
 
-    <h2 class="post__headerSpecial"><i class='fas fa-calendar-alt'></i>Joined September 2022</h2>
+    <h2 class="post__headerSpecial"><i class='fas fa-calendar-alt'></i>Joined {{currentSqueaker.joinDate}}</h2>
 
-    <h2 class="post__headerSpecial"> 0 Followers 0 Following </h2>
+<!--    <h2 class="post__headerSpecial"> 0 Followers 0 Following </h2>-->
 
   </div>
 
@@ -82,9 +85,9 @@
             <div class="post__header">
               <div class="post__headerText">
                 <h3>
-                  {{ squeak.squeaker.username }}
+                  {{ squeak.squeaker.firstName }} {{squeak.squeaker.lastName}}
                   <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span>@{{ squeak.squeaker.username }}</span
+                  ><span class="material-icons post__badge"> verified </span>@{{ squeak.squeaker.username }} · {{squeak.postedAtDate}} · {{squeak.postedAtTime}}</span
                   >
                 </h3>
               </div>
@@ -93,7 +96,7 @@
               </div>
             </div>
             <img
-              src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/275550284_2392137017615959_7898902073337599454_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1oi_mqHsbVUAX-ceWSP&_nc_ht=scontent-lga3-1.xx&oh=00_AT_GpRbzdk5DK_RAB3aKYShOq1qvCxPSjaok_nygBGy_7Q&oe=631AF6E5"
+              src="{{squeak.image}}"
               alt=""
             />
             <div class="post__footer">

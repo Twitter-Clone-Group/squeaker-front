@@ -17,7 +17,7 @@ body {
 }
 
 .sidebarOption .material-icons
-/*.fa-twitter */
+  /*.fa-twitter */
 {
   padding: 20px;
 }
@@ -186,7 +186,7 @@ body {
 .post {
   display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid var(--squeaker-background);
+  border-bottom: 5px solid var(--squeaker-background);
   padding-bottom: 10px;
 }
 
@@ -221,7 +221,10 @@ body {
 
 .post__headerDescription {
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 30px;
+  font-family: Trebuchet MS;
+
+;
 }
 
 .post__body {
@@ -269,3 +272,6 @@ body {
   font-size: 18px;
   font-weight: 800;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
