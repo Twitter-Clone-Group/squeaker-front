@@ -7,7 +7,7 @@
 
 body {
   --squeaker-color: rgb(219, 203, 253);
-  --squeaker-background: #fafafa;
+  --squeaker-background: #DACBFD;
 }
 
 .sidebarOption {
@@ -29,7 +29,7 @@ body {
 }
 
 .sidebarOption:hover {
-  background-color: var(--squeaker-background);
+  background-color: #F5F8FA;
   border-radius: 30px;
   color: var(--squeaker-color);
   transition: color 100ms ease-out;
@@ -163,7 +163,7 @@ body {
   cursor: pointer;
   background-color: var(--squeaker-color);
   border: none;
-  color: white;
+  color: black;
   font-weight: 900;
 
   border-radius: 30px;
@@ -257,7 +257,7 @@ body {
 }
 
 .widgets__searchIcon {
-  color: gray;
+  color: black;
 }
 
 .widgets__widgetContainer {

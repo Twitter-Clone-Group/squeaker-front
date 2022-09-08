@@ -47,7 +47,7 @@
   color:rgb(219, 203, 253);
 }
 .btn-outlined:hover{
-  background-color:#eaf5fd;
+  background-color:rgb(219, 203, 253);
   transition: background-color 0.2s;
 }
 .btn-filled{
