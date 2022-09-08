@@ -12,8 +12,8 @@ export class SqueakerService {
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
-    this.squeakerUrl = 'http://localhost:8080/squeaker';
-    // this.squeakerUrl = 'https://tcg-squaker-back.herokuapp.com/squeaker';
+    // this.squeakerUrl = 'http://localhost:8080/squeaker';
+    this.squeakerUrl = 'https://tcg-squaker-back.herokuapp.com/squeaker';
     this.headers = new HttpHeaders({'Content-Type' : 'application/json'});
   }
 
