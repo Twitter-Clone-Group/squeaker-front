@@ -120,7 +120,7 @@ body {
 
 .squeakBox {
   padding-bottom: 10px;
-  border-bottom: 8px solid var(--squeaker-background);
+  border-bottom: 1px solid var(--squeaker-background);
   padding-right: 10px;
 }
 
@@ -186,7 +186,7 @@ body {
 .post {
   display: flex;
   align-items: flex-start;
-  border-bottom: 5px solid var(--squeaker-background);
+  border-bottom: 1px solid var(--squeaker-background);
   padding-bottom: 10px;
 }
 
