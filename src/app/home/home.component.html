@@ -18,7 +18,7 @@
 <!-- sidebar starts -->
 <div class="sidebar">
 <!--  <i class="fab fa-twitter"></i>-->
-  <img src="https://cdn.discordapp.com/attachments/1009121959516315688/1016814063101165668/0C187506-04B4-4FBE-96F1-F4729304D41D.png" width = "220" height = "50"/>
+  <img src="https://cdn.discordapp.com/attachments/826856558318977048/1017177806016364574/39A1C529-66C3-4369-8705-55745D6EB374.png" width = "220" height = "50"/>
   <div class="sidebarOption active">
     <span class="material-icons"> home </span>
     <button class="sidebarButton" routerLink="/home">Home</button>
@@ -79,8 +79,44 @@
   </div>
   <div class="widgets__widgetContainer">
     <h2>Who To Follow</h2>
-
-    <button class="sidebarButton" routerLink="/profile">Follow</button>
+    <div>
+      <ol>
+        <li *ngFor="let squeaker of this.squeakers">
+          <div class="post">
+            <div class="post__avatar">
+              <img
+                src="{{squeaker.profilePic}}"
+                alt=""
+              />
+            </div>
+            <div class="post__body">
+              <div class="post__header">
+                <div class="post__headerText">
+                  <h3>
+                    {{ squeaker.username }}
+                    <span class="post__headerSpecial"
+                    ><span class="material-icons post__badge"> verified </span>@{{ squeaker.username }}</span
+                    >
+                  </h3>
+                </div>
+<!--                <div class="post__headerDescription">-->
+<!--                  <p>{{squeak.content}}</p>-->
+<!--                </div>div-->
+              </div>
+              <img
+                src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/275550284_2392137017615959_7898902073337599454_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1oi_mqHsbVUAX-ceWSP&_nc_ht=scontent-lga3-1.xx&oh=00_AT_GpRbzdk5DK_RAB3aKYShOq1qvCxPSjaok_nygBGy_7Q&oe=631AF6E5"
+                alt=""
+              />
+              <div class="post__footer">
+                <span class="material-icons"> repeat </span>
+                <span class="material-icons"> favorite_border </span>
+                <span class="material-icons"> publish </span>
+              </div>
+            </div>
+          </div>
+      </ol>
+    </div>
+            <button class="sidebarButton" routerLink="/profile">Follow</button>
 
   </div>
 

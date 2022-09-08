@@ -11,6 +11,7 @@ import {DataService} from "../services/data.service";
 export class HomeComponent implements OnInit {
   // @ts-ignore
   currentSqueaker: Squeaker;
+  squeakers: Squeaker[] = [];
 
   constructor(private squeakerService: SqueakerService, private dataService: DataService) {
   }
@@ -35,6 +36,12 @@ export class HomeComponent implements OnInit {
             this.currentSqueaker = data;
           }
         )
+    )
+  }
+  findAllSqueaker (): void {
+    this.squeakerService.findAll().subscribe((data: Squeaker[]) => {
+        this.squeakers = data;
+      }
     )
   }
 
