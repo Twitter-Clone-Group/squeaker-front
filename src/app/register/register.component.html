@@ -48,7 +48,8 @@
       <input type="password" name = 'password' ngModel placeholder="Password">
 
       <p>Already have a Squeaker account? Click <a href="/login">here</a> to return to the login page.</p>
-      <a href="/login" class="button" type="submit" (click)="saveSqueaker(gfg)">Register</a>
+      <button routerLink="/login" type="submit" (click)="saveSqueaker(gfg)">Register</button>
+<!--      <a href="/login" class="button" type="submit" (click)="saveSqueaker(gfg)">Register</a>-->
     </form>
   </div>
 </div>
